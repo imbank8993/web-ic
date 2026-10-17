@@ -1,0 +1,15 @@
+# Error logs & logs
+error_log
+*.log
+
+# Database dumps & archives
+*.sql
+*.tar.gz
+*.zip
+
+# FTP & Editor configs
+.ftpquota
+.vscode/
+.idea/
+.claude/
+tes.php

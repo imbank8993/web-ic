@@ -1,0 +1,35 @@
+name: Deploy to VPS Docker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          script: |
+            TARGET_DIR="/www/wwwroot/icgowa-docker"
+            if [ ! -d "$TARGET_DIR" ]; then
+              echo "Direktori belum ada, melakukan clone..."
+              git clone https://github.com/imbank8993/web-ic.git "$TARGET_DIR"
+              cd "$TARGET_DIR"
+            else
+              echo "Memperbarui repository..."
+              cd "$TARGET_DIR"
+              git fetch --all
+              git reset --hard origin/main
+            fi
+            echo "Menjalankan Docker container..."
+            docker compose down || true
+            docker compose up -d --build
+            echo "Deploy selesai dan berjalan di port 4000!"

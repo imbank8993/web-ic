@@ -1,0 +1,14 @@
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+error_log
+*.sql
+*.zip
+*.tar.gz
+.claude
+tes.php
+.ftpquota
