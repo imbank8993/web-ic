@@ -15,6 +15,7 @@ services:
       WORDPRESS_TABLE_PREFIX: wphv_
       WP_HOME: https://icgowa.sch.id
       WP_SITEURL: https://icgowa.sch.id
+    entrypoint: ["sh", "-c", "chown -R www-data:www-data /var/www/html/wp-content/uploads && exec docker-entrypoint.sh apache2-foreground"]
     volumes:
       - ./wp-content/uploads:/var/www/html/wp-content/uploads
 
