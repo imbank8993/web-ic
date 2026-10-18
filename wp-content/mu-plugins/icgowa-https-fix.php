@@ -49,6 +49,15 @@ function icgowa_rewrite_environment_urls( $content ) {
 		return $content;
 	}
 
+	// Ganti gambar Maklumat Pelayanan pada halaman PTSP dengan foto Maklumat terbaru
+	if ( strpos( $content, 'Maklumat-Layanan' ) !== false ) {
+		$content = preg_replace(
+			'/Maklumat-Layanan(?:-[0-9]+x[0-9]+|-scaled)?\.jpg/i',
+			'Maklumat-Pelayanan-Baru.jpeg?v=2',
+			$content
+		);
+	}
+
 	if ( icgowa_is_local_dev() ) {
 		$scheme     = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ) ? 'https://' : 'http://';
 		$local_base = $scheme . $_SERVER['HTTP_HOST'];
@@ -147,6 +156,18 @@ add_action( 'template_redirect', function () {
 		return;
 	}
 	if ( icgowa_is_local_dev() || icgowa_is_production_https() ) {
-		ob_start( 'icgowa_rewrite_environment_urls' );
+		ob_start( function ( $buffer ) {
+			$rewritten = icgowa_rewrite_environment_urls( $buffer );
+			if (
+				icgowa_is_local_dev() &&
+				defined( 'ICGOWA_LOCAL_CACHE_FILE' ) &&
+				! is_404() &&
+				http_response_code() === 200 &&
+				strlen( $rewritten ) > 1000
+			) {
+				@file_put_contents( ICGOWA_LOCAL_CACHE_FILE, $rewritten );
+			}
+			return $rewritten;
+		} );
 	}
 }, 1 );

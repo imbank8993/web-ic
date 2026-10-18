@@ -19,6 +19,7 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
+@set_time_limit( 300 );
 /** The name of the database for WordPress */
 define( 'DB_NAME', getenv('WORDPRESS_DB_NAME') ?: 'sql_icgowa' );
 
@@ -29,15 +30,7 @@ define( 'DB_USER', getenv('WORDPRESS_DB_USER') ?: 'sql_icgowa' );
 define( 'DB_PASSWORD', getenv('WORDPRESS_DB_PASSWORD') !== false ? getenv('WORDPRESS_DB_PASSWORD') : '73HEMczxpLFrR4AY' );
 
 /** Database hostname */
-$is_local_host = (
-	PHP_OS_FAMILY === 'Windows' ||
-	( isset( $_SERVER['HTTP_HOST'] ) && (
-		strpos( $_SERVER['HTTP_HOST'], 'icgowa.test' ) !== false ||
-		strpos( $_SERVER['HTTP_HOST'], 'localhost' ) !== false ||
-		strpos( $_SERVER['HTTP_HOST'], '127.0.0.1' ) !== false
-	) )
-);
-define( 'DB_HOST', getenv('WORDPRESS_DB_HOST') ?: ( $is_local_host ? '127.0.0.1:3306' : '194.233.81.192:3306' ) );
+define( 'DB_HOST', getenv('WORDPRESS_DB_HOST') ?: '194.233.81.192:3306' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -67,6 +60,56 @@ if (
 	$local_scheme = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ) ? 'https://' : 'http://';
 	define( 'WP_HOME', $local_scheme . $_SERVER['HTTP_HOST'] );
 	define( 'WP_SITEURL', $local_scheme . $_SERVER['HTTP_HOST'] );
+	define( 'DISABLE_WP_CRON', true );
+
+	// Akselerator khusus Local Development agar tidak lambat mengakses MySQL jarak jauh di VPS
+	if ( PHP_SAPI !== 'cli' && isset( $_SERVER['REQUEST_URI'] ) ) {
+		$_icgowa_req_path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+		if ( $_icgowa_req_path ) {
+			$_icgowa_ext = strtolower( pathinfo( $_icgowa_req_path, PATHINFO_EXTENSION ) );
+			// Jika file statis tidak ada di lokal, jangan jalankan 170 query WordPress (404)
+			if ( in_array( $_icgowa_ext, array( 'ico', 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'woff', 'woff2', 'ttf', 'eot', 'map' ), true ) ) {
+				if ( strpos( $_icgowa_req_path, '/wp-content/uploads/' ) === 0 ) {
+					header( 'Location: https://icgowa.sch.id' . $_SERVER['REQUEST_URI'], true, 302 );
+					exit;
+				}
+				http_response_code( 204 );
+				exit;
+			}
+		}
+
+		// Cache HTML halaman lokal (otomatis ter-reset setiap kali ada perubahan di mu-plugins atau CSS Elementor)
+		if (
+			( ! isset( $_SERVER['REQUEST_METHOD'] ) || $_SERVER['REQUEST_METHOD'] === 'GET' ) &&
+			strpos( $_SERVER['REQUEST_URI'], '/wp-admin' ) === false &&
+			strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) === false &&
+			strpos( $_SERVER['REQUEST_URI'], 'wp-json' ) === false &&
+			strpos( $_SERVER['REQUEST_URI'], 'admin-ajax.php' ) === false &&
+			empty( $_GET['nocache'] )
+		) {
+			$_icgowa_mtime_hash = '';
+			foreach ( glob( __DIR__ . '/wp-content/mu-plugins/*.php' ) ?: array() as $_f ) {
+				$_icgowa_mtime_hash .= $_f . ':' . @filemtime( $_f ) . '|';
+			}
+			foreach ( glob( __DIR__ . '/wp-content/uploads/elementor/css/*.css' ) ?: array() as $_f ) {
+				$_icgowa_mtime_hash .= $_f . ':' . @filemtime( $_f ) . '|';
+			}
+			$_icgowa_cache_dir = rtrim( sys_get_temp_dir(), '/\\' ) . '/icgowa_local_cache';
+			if ( ! is_dir( $_icgowa_cache_dir ) ) {
+				@mkdir( $_icgowa_cache_dir, 0777, true );
+			}
+			define(
+				'ICGOWA_LOCAL_CACHE_FILE',
+				$_icgowa_cache_dir . '/page_' . md5( $_SERVER['HTTP_HOST'] . '|' . $_SERVER['REQUEST_URI'] . '|' . $_icgowa_mtime_hash ) . '.html'
+			);
+			if ( file_exists( ICGOWA_LOCAL_CACHE_FILE ) && ( time() - @filemtime( ICGOWA_LOCAL_CACHE_FILE ) ) < 1800 ) {
+				header( 'Content-Type: text/html; charset=UTF-8' );
+				header( 'X-ICGowa-Local-Cache: HIT' );
+				readfile( ICGOWA_LOCAL_CACHE_FILE );
+				exit;
+			}
+		}
+	}
 } elseif ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.sch.id' ) !== false ) {
 	define( 'WP_HOME', 'https://icgowa.sch.id' );
 	define( 'WP_SITEURL', 'https://icgowa.sch.id' );

@@ -1,0 +1,2048 @@
+{
+    "tw1": [
+        {
+            "name": "Kantin",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan meja, kursi, dan area kantin siswa",
+                    "score": 3.99,
+                    "pct": 79.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Rasa dan kualitas makanan\/minuman di kantin siswa",
+                    "score": 3.81,
+                    "pct": 76.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Variasi menu makanan dan minuman yang tersedia di kantin siswa",
+                    "score": 3.86,
+                    "pct": 77.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Porsi makanan yang diberikan",
+                    "score": 3.3,
+                    "pct": 66,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peramahan dan pelayanan petugas kantin",
+                    "score": 3.63,
+                    "pct": 72.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan pelayanan saat penyajian makanan\/minuman",
+                    "score": 3.83,
+                    "pct": 76.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan makanan\/minuman saat jam istirahat sibuk",
+                    "score": 3.69,
+                    "pct": 73.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Ketepatan waktu penyajian makanan\/minuman",
+                    "score": 3.96,
+                    "pct": 79.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kebersihan kantin secara keseluruhan",
+                    "score": 3.89,
+                    "pct": 77.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keseluruhan dengan kantin sebagai tempat makan siswa",
+                    "score": 3.99,
+                    "pct": 79.8,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.8,
+            "avg_pct": 75.9,
+            "predicate": "Puas"
+        },
+        {
+            "name": "UKS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan dan kenyamanan ruangan UKS",
+                    "score": 4.27,
+                    "pct": 85.4,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Fasilitas ruangan UKS",
+                    "score": 3.84,
+                    "pct": 76.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Ketersediaan obat-obatan di UKS",
+                    "score": 3.41,
+                    "pct": 68.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kualitas dan kesesuaian obat yang diberikan oleh Perawat UKS",
+                    "score": 3.81,
+                    "pct": 76.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketersediaan dan kehadiran Perawat Putri di UKS selama 24 jam",
+                    "score": 3.62,
+                    "pct": 72.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Ketersediaan dan kehadiran Perawat Putra di UKS selama 24 jam",
+                    "score": 3.94,
+                    "pct": 78.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Pelayanan dan penanganan Perawat Putri sebagai petugas UKS",
+                    "score": 3.74,
+                    "pct": 74.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan dan penanganan Perawat Putra sebagai petugas UKS",
+                    "score": 4.2,
+                    "pct": 83.96,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kecepatan respons Perawat Putri saat ada siswa yang membutuhkan pertolongan",
+                    "score": 3.79,
+                    "pct": 75.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kecepatan respons Perawat Putra saat ada siswa yang membutuhkan pertolongan",
+                    "score": 4.18,
+                    "pct": 83.6,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Penjelasan dan edukasi kesehatan yang diberikan oleh Para Perawat UKS",
+                    "score": 3.97,
+                    "pct": 79.4,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.89,
+            "avg_pct": 77.76,
+            "predicate": "Puas"
+        },
+        {
+            "name": "PTSP",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan prosedur pengurusan surat di PTSP",
+                    "score": 3.28,
+                    "pct": 65.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kecepatan proses pengurusan surat di PTSP",
+                    "score": 3.33,
+                    "pct": 66.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan informasi dan persyaratan yang diberikan saat pengurusan surat",
+                    "score": 3.35,
+                    "pct": 67,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Keramahan dan kesopanan petugas PTSP saat melayani",
+                    "score": 3.61,
+                    "pct": 72.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kemudahan pengurusan izin (cuti, dispensasi, dll.) di PTSP",
+                    "score": 3.07,
+                    "pct": 61.4,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan penyelesaian pengurusan izin di PTSP",
+                    "score": 3.27,
+                    "pct": 65.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Fasilitas dan kenyamanan ruang tunggu PTSP",
+                    "score": 3.89,
+                    "pct": 77.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan keluhan atau masalah terkait persuratan dan perizinan",
+                    "score": 3.23,
+                    "pct": 64.6,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Keseluruhan dengan pelayanan PTSP",
+                    "score": 3.54,
+                    "pct": 70.8,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.4,
+            "avg_pct": 67.93,
+            "predicate": "Puas"
+        },
+        {
+            "name": "HUMAS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kecepatan dan ketepatan informasi yang disampaikan oleh Bidang Humas",
+                    "score": 3.99,
+                    "pct": 79.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Keramahan dan kesopanan petugas Humas saat melayani permintaan informasi",
+                    "score": 3.92,
+                    "pct": 78.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan dan kelengkapan informasi yang diberikan oleh Bidang Humas",
+                    "score": 3.83,
+                    "pct": 76.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Responsivitas Humas dalam menjawab pertanyaan atau keluhan",
+                    "score": 3.59,
+                    "pct": 71.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kualitas pengumuman dan pemberitaan acara sekolah melalui media Humas",
+                    "score": 4.09,
+                    "pct": 81.8,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kemudahan mengakses informasi kegiatan sekolah melalui channel Humas",
+                    "score": 3.84,
+                    "pct": 76.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Penanganan pengaduan atau keluhan yang disampaikan melalui Bidang Humas",
+                    "score": 3.54,
+                    "pct": 70.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Citra dan komunikasi sekolah yang dibangun oleh Bidang Humas",
+                    "score": 3.83,
+                    "pct": 76.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Ketersediaan dan keakuratan informasi publik yang dikelola oleh Humas",
+                    "score": 4,
+                    "pct": 80,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.85,
+            "avg_pct": 76.96,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Keasramaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelaksanaan program kegiatan keasramaan (shalat berjamaah, tadarus, dll.)",
+                    "score": 3.76,
+                    "pct": 75.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kualitas dan variasi materi pembinaan keagamaan yang disampaikan Bidang Keasramaan",
+                    "score": 3.46,
+                    "pct": 69.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Program pengembangan akhlak dan karakter siswa oleh Bidang Keasramaan",
+                    "score": 3.38,
+                    "pct": 67.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kegiatan pembinaan rohani dan mental siswa (pengajian, kajian kitab, dll.)",
+                    "score": 3.4,
+                    "pct": 68,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peran pembina asrama dalam membimbing siswa di luar jam pelajaran",
+                    "score": 3.29,
+                    "pct": 65.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kedisiplinan dan pengawasan kegiatan religi di asrama",
+                    "score": 3.51,
+                    "pct": 70.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Program peningkatan nilai-nilai keislaman dan akhlak mulia",
+                    "score": 3.64,
+                    "pct": 72.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Keramahan dan keteladanan pembina asrama (putra dan putri)",
+                    "score": 3.31,
+                    "pct": 66.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pelayanan Bidang Keasramaan dalam membentuk karakter dan religiusitas siswa",
+                    "score": 3.46,
+                    "pct": 69.2,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.47,
+            "avg_pct": 69.36,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Sarana dan Prasarana",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kondisi dan kebersihan gedung kelas",
+                    "score": 3.22,
+                    "pct": 64.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Ketersediaan dan kondisi meja serta kursi siswa",
+                    "score": 3.48,
+                    "pct": 69.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Fasilitas pencahayaan dan ventilasi udara di ruang kelas",
+                    "score": 2.94,
+                    "pct": 58.8,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketersediaan dan kondisi laboratorium (IPA, komputer, bahasa, dll.)",
+                    "score": 3.12,
+                    "pct": 62.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Sarpras yang ada di Laboratorium",
+                    "score": 3.32,
+                    "pct": 66.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Pelayanan Laboran",
+                    "score": 3.67,
+                    "pct": 73.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan dan kondisi perpustakaan madrasah",
+                    "score": 3.1,
+                    "pct": 62,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan Petugas Perpustakaan",
+                    "score": 3.32,
+                    "pct": 66.33,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Fasilitas toilet dan kamar mandi siswa",
+                    "score": 2.01,
+                    "pct": 40.2,
+                    "pred": "Tidak Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kebersihan dan pemeliharaan halaman serta lingkungan madrasah",
+                    "score": 3.1,
+                    "pct": 62,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pelayanan Petugas Kebersihan",
+                    "score": 3.78,
+                    "pct": 75.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Ketersediaan sarana olahraga dan tempat ibadah",
+                    "score": 3.33,
+                    "pct": 66.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Keseluruhan dengan pengelolaan sarana dan prasarana madrasah",
+                    "score": 2.82,
+                    "pct": 56.4,
+                    "pred": "Cukup Puas"
+                }
+            ],
+            "avg_score": 3.17,
+            "avg_pct": 63.39,
+            "predicate": "Cukup Puas"
+        },
+        {
+            "name": "Kesiswaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelayanan dan pengurusan kegiatan ekstrakurikuler di Bidang Kesiswaan",
+                    "score": 3.09,
+                    "pct": 61.8,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Penanganan masalah kedisiplinan siswa (absensi, pelanggaran, dll.)",
+                    "score": 3.48,
+                    "pct": 69.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Pelayanan Guru BK dalam memberikan bimbingan konseling dan penanganan masalah",
+                    "score": 3.04,
+                    "pct": 60.8,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Program Bimbingan dan Konseling",
+                    "score": 3.16,
+                    "pct": 63.2,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Keaktifan Ekskul siswa",
+                    "score": 2.87,
+                    "pct": 57.4,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Bimbingan dari Pembina ekskul siswa",
+                    "score": 3.12,
+                    "pct": 62.4,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Informasi dan koordinasi terkait kegiatan siswa (lomba, OSIM, MPK, dll.)",
+                    "score": 3.82,
+                    "pct": 76.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan kasus bullying, konflik antar siswa, atau masalah sosial dalam madrasah",
+                    "score": 3.52,
+                    "pct": 70.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Program motivasi dan prestasi siswa yang dikelola Bidang Kesiswaan",
+                    "score": 3.2,
+                    "pct": 64,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keramahan dan responsivitas petugas Bidang Kesiswaan saat melayani siswa",
+                    "score": 3.45,
+                    "pct": 69,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pengelolaan Lomba Bidang Kesiswaan",
+                    "score": 3.08,
+                    "pct": 61.6,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Keseluruhan dengan pelayanan Bidang Kesiswaan Madrasah",
+                    "score": 3.34,
+                    "pct": 66.8,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.26,
+            "avg_pct": 65.28,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Akademik",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan mengakses jadwal pelajaran dan administrasi lainnya melalui aplikasi ACCA",
+                    "score": 4.01,
+                    "pct": 80.2,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kemampuan guru dalam menyampaikan materi pelajaran secara jelas",
+                    "score": 3.61,
+                    "pct": 72.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Metode pengajaran dalam PBM yang digunakan oleh guru di kelas",
+                    "score": 3.59,
+                    "pct": 71.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketepatan waktu guru dalam memulai pelajaran",
+                    "score": 3.77,
+                    "pct": 75.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketepatan waktu guru dalam mengakhiri pelajaran",
+                    "score": 3.57,
+                    "pct": 71.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Interaksi dan komunikasi guru dengan siswa selama proses belajar mengajar",
+                    "score": 3.74,
+                    "pct": 74.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Kemampuan guru dalam mengelola kelas dan menjaga kedisiplinan",
+                    "score": 3.86,
+                    "pct": 77.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Kemampuan guru dalam memberikan motivasi, dukungan, dan inspirasi",
+                    "score": 3.74,
+                    "pct": 74.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pemberian tugas, pekerjaan rumah, dan penilaian yang dilakukan oleh guru",
+                    "score": 2.7,
+                    "pct": 54,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Respons guru terhadap pertanyaan atau kesulitan belajar siswa",
+                    "score": 3.54,
+                    "pct": 70.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Dukungan Bidang Akademik dalam mendukung proses pembelajaran",
+                    "score": 3.92,
+                    "pct": 78.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Metode dan pelayanan guru dalam memberikan pembelajaran tambahan bagi siswa",
+                    "score": 3.64,
+                    "pct": 72.8,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Pembinaan Wali Kelas",
+                    "score": 4.49,
+                    "pct": 89.8,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 14,
+                    "label": "Keseluruhan kualitas pengajaran dan pelayanan pendidikan di sekolah",
+                    "score": 3.53,
+                    "pct": 70.6,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 15,
+                    "label": "Kompetensi dan profesionalisme guru secara keseluruhan",
+                    "score": 3.59,
+                    "pct": 71.8,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.69,
+            "avg_pct": 73.73,
+            "predicate": "Puas"
+        }
+    ],
+    "tw2": [
+        {
+            "name": "Kantin",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan meja, kursi, dan area kantin siswa",
+                    "score": 4.13,
+                    "pct": 82.54,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Rasa dan kualitas makanan\/minuman di kantin siswa",
+                    "score": 3.82,
+                    "pct": 76.34,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Variasi menu makanan dan minuman yang tersedia di kantin siswa",
+                    "score": 3.96,
+                    "pct": 79.15,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Porsi makanan yang diberikan",
+                    "score": 3.39,
+                    "pct": 67.89,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peramahan dan pelayanan petugas kantin",
+                    "score": 4.03,
+                    "pct": 80.56,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan pelayanan saat penyajian makanan\/minuman",
+                    "score": 3.79,
+                    "pct": 75.77,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan makanan\/minuman saat jam istirahat sibuk",
+                    "score": 3.7,
+                    "pct": 74.08,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Ketepatan waktu penyajian makanan\/minuman",
+                    "score": 4.04,
+                    "pct": 80.85,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kebersihan kantin secara keseluruhan",
+                    "score": 3.94,
+                    "pct": 78.87,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keseluruhan dengan kantin sebagai tempat makan siswa",
+                    "score": 4.03,
+                    "pct": 80.56,
+                    "pred": "Sangat Puas"
+                }
+            ],
+            "avg_score": 3.88,
+            "avg_pct": 77.66,
+            "predicate": "Puas"
+        },
+        {
+            "name": "UKS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan dan kenyamanan ruangan UKS",
+                    "score": 4.28,
+                    "pct": 85.63,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Fasilitas ruangan UKS",
+                    "score": 3.89,
+                    "pct": 77.75,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Ketersediaan obat-obatan di UKS",
+                    "score": 3.66,
+                    "pct": 73.24,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kualitas dan kesesuaian obat yang diberikan oleh Perawat UKS",
+                    "score": 3.94,
+                    "pct": 78.87,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketersediaan dan kehadiran Perawat Putri di UKS selama 24 jam",
+                    "score": 3.93,
+                    "pct": 78.59,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Ketersediaan dan kehadiran Perawat Putra di UKS selama 24 jam",
+                    "score": 4.07,
+                    "pct": 81.41,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Pelayanan dan penanganan Perawat Putri sebagai petugas UKS",
+                    "score": 3.96,
+                    "pct": 79.15,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan dan penanganan Perawat Putra sebagai petugas UKS",
+                    "score": 4.29,
+                    "pct": 85.71,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kecepatan respons Perawat Putri saat ada siswa yang membutuhkan pertolongan",
+                    "score": 3.97,
+                    "pct": 79.44,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kecepatan respons Perawat Putra saat ada siswa yang membutuhkan pertolongan",
+                    "score": 4.21,
+                    "pct": 84.23,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Penjelasan dan edukasi kesehatan yang diberikan oleh Para Perawat UKS",
+                    "score": 4.06,
+                    "pct": 81.13,
+                    "pred": "Sangat Puas"
+                }
+            ],
+            "avg_score": 4.02,
+            "avg_pct": 80.47,
+            "predicate": "Sangat Puas"
+        },
+        {
+            "name": "PTSP",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan prosedur pengurusan surat di PTSP",
+                    "score": 3.55,
+                    "pct": 70.99,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kecepatan proses pengurusan surat di PTSP",
+                    "score": 3.54,
+                    "pct": 70.7,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan informasi dan persyaratan yang diberikan saat pengurusan surat",
+                    "score": 3.68,
+                    "pct": 73.52,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Keramahan dan kesopanan petugas PTSP saat melayani",
+                    "score": 3.86,
+                    "pct": 77.18,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kemudahan pengurusan izin (cuti, dispensasi, dll.) di PTSP",
+                    "score": 3.34,
+                    "pct": 66.76,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan penyelesaian pengurusan izin di PTSP",
+                    "score": 3.54,
+                    "pct": 70.7,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Fasilitas dan kenyamanan ruang tunggu PTSP",
+                    "score": 4.13,
+                    "pct": 82.54,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan keluhan atau masalah terkait persuratan dan perizinan",
+                    "score": 3.46,
+                    "pct": 69.3,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Keseluruhan dengan pelayanan PTSP",
+                    "score": 3.69,
+                    "pct": 73.8,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.64,
+            "avg_pct": 72.83,
+            "predicate": "Puas"
+        },
+        {
+            "name": "HUMAS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kecepatan dan ketepatan informasi yang disampaikan oleh Bidang Humas",
+                    "score": 4.08,
+                    "pct": 81.69,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Keramahan dan kesopanan petugas Humas saat melayani permintaan informasi",
+                    "score": 4.03,
+                    "pct": 80.56,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan dan kelengkapan informasi yang diberikan oleh Bidang Humas",
+                    "score": 3.97,
+                    "pct": 79.44,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Responsivitas Humas dalam menjawab pertanyaan atau keluhan",
+                    "score": 3.8,
+                    "pct": 76.06,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kualitas pengumuman dan pemberitaan acara sekolah melalui media Humas",
+                    "score": 4.1,
+                    "pct": 81.97,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kemudahan mengakses informasi kegiatan sekolah melalui channel Humas",
+                    "score": 4.06,
+                    "pct": 81.13,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Penanganan pengaduan atau keluhan yang disampaikan melalui Bidang Humas",
+                    "score": 3.72,
+                    "pct": 74.37,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Citra dan komunikasi sekolah yang dibangun oleh Bidang Humas",
+                    "score": 3.97,
+                    "pct": 79.44,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Ketersediaan dan keakuratan informasi publik yang dikelola oleh Humas",
+                    "score": 4.01,
+                    "pct": 80.28,
+                    "pred": "Sangat Puas"
+                }
+            ],
+            "avg_score": 3.97,
+            "avg_pct": 79.44,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Keasramaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelaksanaan program kegiatan keasramaan (shalat berjamaah, tadarus, dll.)",
+                    "score": 3.58,
+                    "pct": 71.55,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kualitas dan variasi materi pembinaan keagamaan yang disampaikan Bidang Keasramaan",
+                    "score": 3.3,
+                    "pct": 65.92,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Program pengembangan akhlak dan karakter siswa oleh Bidang Keasramaan",
+                    "score": 3.39,
+                    "pct": 67.89,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kegiatan pembinaan rohani dan mental siswa (pengajian, kajian kitab, dll.)",
+                    "score": 3.27,
+                    "pct": 65.35,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peran pembina asrama dalam membimbing siswa di luar jam pelajaran",
+                    "score": 3.39,
+                    "pct": 67.89,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kedisiplinan dan pengawasan kegiatan religi di asrama",
+                    "score": 3.59,
+                    "pct": 71.83,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Program peningkatan nilai-nilai keislaman dan akhlak mulia",
+                    "score": 3.62,
+                    "pct": 72.39,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Keramahan dan keteladanan pembina asrama (putra dan putri)",
+                    "score": 3.52,
+                    "pct": 70.42,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pelayanan Bidang Keasramaan dalam membentuk karakter dan religiusitas siswa",
+                    "score": 3.49,
+                    "pct": 69.86,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.46,
+            "avg_pct": 69.23,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Sarana dan Prasarana",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kondisi dan kebersihan gedung kelas",
+                    "score": 3.3,
+                    "pct": 65.92,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Ketersediaan dan kondisi meja serta kursi siswa",
+                    "score": 2.99,
+                    "pct": 59.72,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Fasilitas pencahayaan dan ventilasi udara di ruang kelas",
+                    "score": 3.18,
+                    "pct": 63.66,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketersediaan dan kondisi laboratorium (IPA, komputer, bahasa, dll.)",
+                    "score": 3.41,
+                    "pct": 68.17,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Sarpras yang ada di Laboratorium",
+                    "score": 3.35,
+                    "pct": 67.04,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Pelayanan Laboran",
+                    "score": 4.06,
+                    "pct": 81.13,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan dan kondisi perpustakaan madrasah",
+                    "score": 3.25,
+                    "pct": 65.07,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan Petugas Perpustakaan",
+                    "score": 3.55,
+                    "pct": 70.99,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Fasilitas toilet dan kamar mandi siswa",
+                    "score": 2.45,
+                    "pct": 49.01,
+                    "pred": "Tidak Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kebersihan dan pemeliharaan halaman serta lingkungan madrasah",
+                    "score": 3.51,
+                    "pct": 70.14,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pelayanan Petugas Kebersihan",
+                    "score": 4.3,
+                    "pct": 85.92,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Ketersediaan sarana olahraga dan tempat ibadah",
+                    "score": 2.9,
+                    "pct": 58.03,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Keseluruhan dengan pengelolaan sarana dan prasarana madrasah",
+                    "score": 3.04,
+                    "pct": 60.85,
+                    "pred": "Cukup Puas"
+                }
+            ],
+            "avg_score": 3.33,
+            "avg_pct": 66.59,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Kesiswaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelayanan dan pengurusan kegiatan ekstrakurikuler di Bidang Kesiswaan",
+                    "score": 3.35,
+                    "pct": 67.04,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Penanganan masalah kedisiplinan siswa (absensi, pelanggaran, dll.)",
+                    "score": 3.65,
+                    "pct": 72.96,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Pelayanan Guru BK dalam memberikan bimbingan konseling dan penanganan masalah",
+                    "score": 3.39,
+                    "pct": 67.89,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Program Bimbingan dan Konseling",
+                    "score": 3.61,
+                    "pct": 72.11,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Keaktifan Ekskul siswa",
+                    "score": 3.08,
+                    "pct": 61.69,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Bimbingan dari Pembina ekskul siswa",
+                    "score": 3.14,
+                    "pct": 62.82,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Informasi dan koordinasi terkait kegiatan siswa (lomba, OSIM, MPK, dll.)",
+                    "score": 4.11,
+                    "pct": 82.25,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan kasus bullying, konflik antar siswa, atau masalah sosial dalam madrasah",
+                    "score": 3.83,
+                    "pct": 76.62,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Program motivasi dan prestasi siswa yang dikelola Bidang Kesiswaan",
+                    "score": 3.62,
+                    "pct": 72.39,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keramahan dan responsivitas petugas Bidang Kesiswaan saat melayani siswa",
+                    "score": 3.79,
+                    "pct": 75.77,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pengelolaan Lomba Bidang Kesiswaan",
+                    "score": 3.49,
+                    "pct": 69.86,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Keseluruhan dengan pelayanan Bidang Kesiswaan Madrasah",
+                    "score": 3.72,
+                    "pct": 74.37,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.57,
+            "avg_pct": 71.31,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Akademik",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan mengakses jadwal pelajaran dan administrasi lainnya melalui aplikasi ACCA",
+                    "score": 4.65,
+                    "pct": 92.96,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kemampuan guru dalam menyampaikan materi pelajaran secara jelas",
+                    "score": 3.75,
+                    "pct": 74.93,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Metode pengajaran dalam PBM yang digunakan oleh guru di kelas",
+                    "score": 3.65,
+                    "pct": 72.96,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketepatan waktu guru dalam memulai pelajaran",
+                    "score": 4.03,
+                    "pct": 80.56,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketepatan waktu guru dalam mengakhiri pelajaran",
+                    "score": 3.76,
+                    "pct": 75.21,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Interaksi dan komunikasi guru dengan siswa selama proses belajar mengajar",
+                    "score": 4.04,
+                    "pct": 80.85,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Kemampuan guru dalam mengelola kelas dan menjaga kedisiplinan",
+                    "score": 4.03,
+                    "pct": 80.56,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Kemampuan guru dalam memberikan motivasi, dukungan, dan inspirasi",
+                    "score": 4.31,
+                    "pct": 86.2,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pemberian tugas, pekerjaan rumah, dan penilaian yang dilakukan oleh guru",
+                    "score": 3.24,
+                    "pct": 64.79,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Respons guru terhadap pertanyaan atau kesulitan belajar siswa",
+                    "score": 3.77,
+                    "pct": 75.49,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Dukungan Bidang Akademik dalam mendukung proses pembelajaran",
+                    "score": 4.32,
+                    "pct": 86.48,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Metode dan pelayanan guru dalam memberikan pembelajaran tambahan bagi siswa",
+                    "score": 3.45,
+                    "pct": 69.01,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Pembinaan Wali Kelas",
+                    "score": 4.58,
+                    "pct": 91.55,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 14,
+                    "label": "Keseluruhan kualitas pengajaran dan pelayanan pendidikan di sekolah",
+                    "score": 3.82,
+                    "pct": 76.34,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 15,
+                    "label": "Kompetensi dan profesionalisme guru secara keseluruhan",
+                    "score": 3.97,
+                    "pct": 79.44,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.96,
+            "avg_pct": 79.15,
+            "predicate": "Puas"
+        }
+    ],
+    "tw3": [
+        {
+            "name": "Kantin",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan meja, kursi, dan area kantin siswa",
+                    "score": 3.69,
+                    "pct": 73.71,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Rasa dan kualitas makanan\/minuman di kantin siswa",
+                    "score": 3.84,
+                    "pct": 76.85,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Variasi menu makanan dan minuman yang tersedia di kantin siswa",
+                    "score": 3.96,
+                    "pct": 79.1,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Porsi makanan yang diberikan",
+                    "score": 3.44,
+                    "pct": 68.76,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peramahan dan pelayanan petugas kantin",
+                    "score": 4.04,
+                    "pct": 80.9,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan pelayanan saat penyajian makanan\/minuman",
+                    "score": 3.64,
+                    "pct": 72.81,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan makanan\/minuman saat jam istirahat sibuk",
+                    "score": 3.73,
+                    "pct": 74.61,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Ketepatan waktu penyajian makanan\/minuman",
+                    "score": 3.76,
+                    "pct": 75.28,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kebersihan kantin secara keseluruhan",
+                    "score": 3.69,
+                    "pct": 73.71,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keseluruhan dengan kantin sebagai tempat makan siswa",
+                    "score": 3.85,
+                    "pct": 77.08,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.76,
+            "avg_pct": 75.28,
+            "predicate": "Puas"
+        },
+        {
+            "name": "UKS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kebersihan dan kenyamanan ruangan UKS",
+                    "score": 4.24,
+                    "pct": 84.72,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Fasilitas ruangan UKS",
+                    "score": 4.17,
+                    "pct": 83.37,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Ketersediaan obat-obatan di UKS",
+                    "score": 4.09,
+                    "pct": 81.8,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kualitas dan kesesuaian obat yang diberikan oleh Perawat UKS",
+                    "score": 4.09,
+                    "pct": 81.8,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketersediaan dan kehadiran Perawat Putri di UKS selama 24 jam",
+                    "score": 4.24,
+                    "pct": 84.72,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Ketersediaan dan kehadiran Perawat Putra di UKS selama 24 jam",
+                    "score": 4.29,
+                    "pct": 85.84,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Pelayanan dan penanganan Perawat Putri sebagai petugas UKS",
+                    "score": 4.15,
+                    "pct": 82.92,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan dan penanganan Perawat Putra sebagai petugas UKS",
+                    "score": 4.39,
+                    "pct": 87.73,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Kecepatan respons Perawat Putri saat ada siswa yang membutuhkan pertolongan",
+                    "score": 4.18,
+                    "pct": 83.6,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kecepatan respons Perawat Putra saat ada siswa yang membutuhkan pertolongan",
+                    "score": 4.37,
+                    "pct": 87.42,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Penjelasan dan edukasi kesehatan yang diberikan oleh Para Perawat UKS",
+                    "score": 4.27,
+                    "pct": 85.39,
+                    "pred": "Sangat Puas"
+                }
+            ],
+            "avg_score": 4.22,
+            "avg_pct": 84.48,
+            "predicate": "Sangat Puas"
+        },
+        {
+            "name": "PTSP",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan prosedur pengurusan surat di PTSP",
+                    "score": 3.93,
+                    "pct": 78.65,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kecepatan proses pengurusan surat di PTSP",
+                    "score": 3.85,
+                    "pct": 77.08,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan informasi dan persyaratan yang diberikan saat pengurusan surat",
+                    "score": 3.98,
+                    "pct": 79.55,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Keramahan dan kesopanan petugas PTSP saat melayani",
+                    "score": 4.1,
+                    "pct": 82.02,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kemudahan pengurusan izin (cuti, dispensasi, dll.) di PTSP",
+                    "score": 3.91,
+                    "pct": 78.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kecepatan penyelesaian pengurusan izin di PTSP",
+                    "score": 3.87,
+                    "pct": 77.3,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Fasilitas dan kenyamanan ruang tunggu PTSP",
+                    "score": 4.25,
+                    "pct": 84.94,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan keluhan atau masalah terkait persuratan dan perizinan",
+                    "score": 3.94,
+                    "pct": 78.88,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Keseluruhan dengan pelayanan PTSP",
+                    "score": 3.96,
+                    "pct": 79.1,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.98,
+            "avg_pct": 79.53,
+            "predicate": "Puas"
+        },
+        {
+            "name": "HUMAS",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kecepatan dan ketepatan informasi yang disampaikan oleh Bidang Humas",
+                    "score": 3.57,
+                    "pct": 71.46,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Keramahan dan kesopanan petugas Humas saat melayani permintaan informasi",
+                    "score": 3.88,
+                    "pct": 77.53,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Kejelasan dan kelengkapan informasi yang diberikan oleh Bidang Humas",
+                    "score": 3.57,
+                    "pct": 71.46,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Responsivitas Humas dalam menjawab pertanyaan atau keluhan",
+                    "score": 3.58,
+                    "pct": 71.69,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Kualitas pengumuman dan pemberitaan acara sekolah melalui media Humas",
+                    "score": 3.12,
+                    "pct": 62.47,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kemudahan mengakses informasi kegiatan sekolah melalui channel Humas",
+                    "score": 3.62,
+                    "pct": 72.36,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Penanganan pengaduan atau keluhan yang disampaikan melalui Bidang Humas",
+                    "score": 3.57,
+                    "pct": 71.46,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Citra dan komunikasi sekolah yang dibangun oleh Bidang Humas",
+                    "score": 3.39,
+                    "pct": 67.87,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Ketersediaan dan keakuratan informasi publik yang dikelola oleh Humas",
+                    "score": 3.52,
+                    "pct": 70.34,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.54,
+            "avg_pct": 70.74,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Keasramaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelaksanaan program kegiatan keasramaan (shalat berjamaah, tadarus, dll.)",
+                    "score": 3.87,
+                    "pct": 77.3,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kualitas dan variasi materi pembinaan keagamaan yang disampaikan Bidang Keasramaan",
+                    "score": 3.54,
+                    "pct": 70.79,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Program pengembangan akhlak dan karakter siswa oleh Bidang Keasramaan",
+                    "score": 3.66,
+                    "pct": 73.26,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Kegiatan pembinaan rohani dan mental siswa (pengajian, kajian kitab, dll.)",
+                    "score": 3.54,
+                    "pct": 70.79,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Peran pembina asrama dalam membimbing siswa di luar jam pelajaran",
+                    "score": 3.63,
+                    "pct": 72.58,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Kedisiplinan dan pengawasan kegiatan religi di asrama",
+                    "score": 3.72,
+                    "pct": 74.38,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Program peningkatan nilai-nilai keislaman dan akhlak mulia",
+                    "score": 3.76,
+                    "pct": 75.28,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Keramahan dan keteladanan pembina asrama (putra dan putri)",
+                    "score": 3.51,
+                    "pct": 70.11,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pelayanan Bidang Keasramaan dalam membentuk karakter dan religiusitas siswa",
+                    "score": 3.55,
+                    "pct": 71.01,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.64,
+            "avg_pct": 72.83,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Sarana dan Prasarana",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kondisi dan kebersihan gedung kelas",
+                    "score": 3.71,
+                    "pct": 74.16,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Ketersediaan dan kondisi meja serta kursi siswa",
+                    "score": 3.87,
+                    "pct": 77.3,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Fasilitas pencahayaan dan ventilasi udara di ruang kelas",
+                    "score": 3.36,
+                    "pct": 67.19,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketersediaan dan kondisi laboratorium (IPA, komputer, bahasa, dll.)",
+                    "score": 3.54,
+                    "pct": 70.79,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Sarpras yang ada di Laboratorium",
+                    "score": 3.62,
+                    "pct": 72.36,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Pelayanan Laboran",
+                    "score": 3.97,
+                    "pct": 79.33,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Ketersediaan dan kondisi perpustakaan madrasah",
+                    "score": 3.3,
+                    "pct": 66.07,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Pelayanan Petugas Perpustakaan",
+                    "score": 3.47,
+                    "pct": 69.44,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Fasilitas toilet dan kamar mandi siswa",
+                    "score": 3.03,
+                    "pct": 60.67,
+                    "pred": "Cukup Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Kebersihan dan pemeliharaan halaman serta lingkungan madrasah",
+                    "score": 3.81,
+                    "pct": 76.18,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pelayanan Petugas Kebersihan",
+                    "score": 4.38,
+                    "pct": 87.64,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Ketersediaan sarana olahraga dan tempat ibadah",
+                    "score": 3.75,
+                    "pct": 75.06,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Keseluruhan dengan pengelolaan sarana dan prasarana madrasah",
+                    "score": 3.56,
+                    "pct": 71.24,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.64,
+            "avg_pct": 72.88,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Kesiswaan",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Pelayanan dan pengurusan kegiatan ekstrakurikuler di Bidang Kesiswaan",
+                    "score": 3.73,
+                    "pct": 74.61,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Penanganan masalah kedisiplinan siswa (absensi, pelanggaran, dll.)",
+                    "score": 3.94,
+                    "pct": 78.88,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Pelayanan Guru BK dalam memberikan bimbingan konseling dan penanganan masalah",
+                    "score": 3.62,
+                    "pct": 72.36,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Program Bimbingan dan Konseling",
+                    "score": 3.58,
+                    "pct": 71.69,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Keaktifan Ekskul siswa",
+                    "score": 3.64,
+                    "pct": 72.81,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Bimbingan dari Pembina ekskul siswa",
+                    "score": 3.79,
+                    "pct": 75.73,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Informasi dan koordinasi terkait kegiatan siswa (lomba, OSIM, MPK, dll.)",
+                    "score": 4.07,
+                    "pct": 81.35,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Penanganan kasus bullying, konflik antar siswa, atau masalah sosial dalam madrasah",
+                    "score": 3.88,
+                    "pct": 77.53,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Program motivasi dan prestasi siswa yang dikelola Bidang Kesiswaan",
+                    "score": 3.92,
+                    "pct": 78.43,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Keramahan dan responsivitas petugas Bidang Kesiswaan saat melayani siswa",
+                    "score": 3.91,
+                    "pct": 78.2,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Pengelolaan Lomba Bidang Kesiswaan",
+                    "score": 3.75,
+                    "pct": 75.06,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Keseluruhan dengan pelayanan Bidang Kesiswaan Madrasah",
+                    "score": 3.82,
+                    "pct": 76.4,
+                    "pred": "Puas"
+                }
+            ],
+            "avg_score": 3.8,
+            "avg_pct": 76.09,
+            "predicate": "Puas"
+        },
+        {
+            "name": "Akademik",
+            "indicators": [
+                {
+                    "no": 1,
+                    "label": "Kemudahan mengakses jadwal pelajaran dan administrasi lainnya melalui aplikasi ACCA",
+                    "score": 4.51,
+                    "pct": 90.11,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 2,
+                    "label": "Kemampuan guru dalam menyampaikan materi pelajaran secara jelas",
+                    "score": 3.82,
+                    "pct": 76.4,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 3,
+                    "label": "Metode pengajaran dalam PBM yang digunakan oleh guru di kelas",
+                    "score": 3.85,
+                    "pct": 77.08,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 4,
+                    "label": "Ketepatan waktu guru dalam memulai pelajaran",
+                    "score": 4.24,
+                    "pct": 84.72,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 5,
+                    "label": "Ketepatan waktu guru dalam mengakhiri pelajaran",
+                    "score": 3.88,
+                    "pct": 77.53,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 6,
+                    "label": "Interaksi dan komunikasi guru dengan siswa selama proses belajar mengajar",
+                    "score": 4.1,
+                    "pct": 82.02,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 7,
+                    "label": "Kemampuan guru dalam mengelola kelas dan menjaga kedisiplinan",
+                    "score": 4.15,
+                    "pct": 82.92,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 8,
+                    "label": "Kemampuan guru dalam memberikan motivasi, dukungan, dan inspirasi",
+                    "score": 4.2,
+                    "pct": 84.04,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 9,
+                    "label": "Pemberian tugas, pekerjaan rumah, dan penilaian yang dilakukan oleh guru",
+                    "score": 3.34,
+                    "pct": 66.74,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 10,
+                    "label": "Respons guru terhadap pertanyaan atau kesulitan belajar siswa",
+                    "score": 3.99,
+                    "pct": 79.78,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 11,
+                    "label": "Dukungan Bidang Akademik dalam mendukung proses pembelajaran",
+                    "score": 4.34,
+                    "pct": 86.74,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 12,
+                    "label": "Metode dan pelayanan guru dalam memberikan pembelajaran tambahan bagi siswa",
+                    "score": 3.7,
+                    "pct": 73.93,
+                    "pred": "Puas"
+                },
+                {
+                    "no": 13,
+                    "label": "Pembinaan Wali Kelas",
+                    "score": 4.65,
+                    "pct": 93.03,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 14,
+                    "label": "Keseluruhan kualitas pengajaran dan pelayanan pendidikan di sekolah",
+                    "score": 4.03,
+                    "pct": 80.67,
+                    "pred": "Sangat Puas"
+                },
+                {
+                    "no": 15,
+                    "label": "Kompetensi dan profesionalisme guru secara keseluruhan",
+                    "score": 4.1,
+                    "pct": 82.02,
+                    "pred": "Sangat Puas"
+                }
+            ],
+            "avg_score": 4.06,
+            "avg_pct": 81.18,
+            "predicate": "Sangat Puas"
+        }
+    ]
+}
