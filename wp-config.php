@@ -29,7 +29,15 @@ define( 'DB_USER', getenv('WORDPRESS_DB_USER') ?: 'sql_icgowa' );
 define( 'DB_PASSWORD', getenv('WORDPRESS_DB_PASSWORD') !== false ? getenv('WORDPRESS_DB_PASSWORD') : '73HEMczxpLFrR4AY' );
 
 /** Database hostname */
-define( 'DB_HOST', getenv('WORDPRESS_DB_HOST') ?: '194.233.81.192:3306' );
+$is_local_host = (
+	PHP_OS_FAMILY === 'Windows' ||
+	( isset( $_SERVER['HTTP_HOST'] ) && (
+		strpos( $_SERVER['HTTP_HOST'], 'icgowa.test' ) !== false ||
+		strpos( $_SERVER['HTTP_HOST'], 'localhost' ) !== false ||
+		strpos( $_SERVER['HTTP_HOST'], '127.0.0.1' ) !== false
+	) )
+);
+define( 'DB_HOST', getenv('WORDPRESS_DB_HOST') ?: ( $is_local_host ? '127.0.0.1:3306' : '194.233.81.192:3306' ) );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -49,9 +57,16 @@ if (
 }
 
 /** Konfigurasi URL Lokal / Server */
-if ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.test' ) !== false ) {
-	define( 'WP_HOME', 'http://icgowa.test' );
-	define( 'WP_SITEURL', 'http://icgowa.test' );
+if (
+	isset( $_SERVER['HTTP_HOST'] ) && (
+		strpos( $_SERVER['HTTP_HOST'], 'icgowa.test' ) !== false ||
+		strpos( $_SERVER['HTTP_HOST'], 'localhost' ) !== false ||
+		strpos( $_SERVER['HTTP_HOST'], '127.0.0.1' ) !== false
+	)
+) {
+	$local_scheme = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ) ? 'https://' : 'http://';
+	define( 'WP_HOME', $local_scheme . $_SERVER['HTTP_HOST'] );
+	define( 'WP_SITEURL', $local_scheme . $_SERVER['HTTP_HOST'] );
 } elseif ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.sch.id' ) !== false ) {
 	define( 'WP_HOME', 'https://icgowa.sch.id' );
 	define( 'WP_SITEURL', 'https://icgowa.sch.id' );
