@@ -38,17 +38,33 @@ define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
 
 /** Support for Reverse Proxy SSL (aaPanel / Nginx / Cloudflare) */
-if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) {
+if (
+	( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && strpos( $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https' ) !== false ) ||
+	( isset( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && $_SERVER['HTTP_X_FORWARDED_SSL'] === 'on' ) ||
+	( isset( $_SERVER['HTTP_CF_VISITOR'] ) && strpos( $_SERVER['HTTP_CF_VISITOR'], 'https' ) !== false ) ||
+	( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.sch.id' ) !== false )
+) {
 	$_SERVER['HTTPS'] = 'on';
+	$_SERVER['SERVER_PORT'] = 443;
 }
 
 /** Konfigurasi URL Lokal / Server */
-if ( getenv('WP_HOME') ) {
-	define( 'WP_HOME', getenv('WP_HOME') );
-	define( 'WP_SITEURL', getenv('WP_SITEURL') ?: getenv('WP_HOME') );
-} elseif ( defined('WP_CLI') || (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'icgowa.test') !== false) ) {
+if ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.test' ) !== false ) {
 	define( 'WP_HOME', 'http://icgowa.test' );
 	define( 'WP_SITEURL', 'http://icgowa.test' );
+} elseif ( isset( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], 'icgowa.sch.id' ) !== false ) {
+	define( 'WP_HOME', 'https://icgowa.sch.id' );
+	define( 'WP_SITEURL', 'https://icgowa.sch.id' );
+} elseif ( getenv('WP_HOME') ) {
+	define( 'WP_HOME', getenv('WP_HOME') );
+	define( 'WP_SITEURL', getenv('WP_SITEURL') ?: getenv('WP_HOME') );
+	if ( strpos( getenv('WP_HOME'), 'https://' ) === 0 ) {
+		$_SERVER['HTTPS'] = 'on';
+		$_SERVER['SERVER_PORT'] = 443;
+	}
+} elseif ( defined('WP_CLI') ) {
+	define( 'WP_HOME', 'https://icgowa.sch.id' );
+	define( 'WP_SITEURL', 'https://icgowa.sch.id' );
 }
 
 /**#@+

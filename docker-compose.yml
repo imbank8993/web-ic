@@ -13,8 +13,8 @@ services:
       WORDPRESS_DB_PASSWORD: 73HEMczxpLFrR4AY
       WORDPRESS_DB_NAME: sql_icgowa
       WORDPRESS_TABLE_PREFIX: wphv_
+      WP_HOME: https://icgowa.sch.id
+      WP_SITEURL: https://icgowa.sch.id
     volumes:
-      - wp_uploads:/var/www/html/wp-content/uploads
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
 
-volumes:
-  wp_uploads:
