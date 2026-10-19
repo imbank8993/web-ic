@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#3730a3"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="avatarGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGrad3)"/>
+
+  <!-- Decorative Subtle Pattern Overlay -->
+  <circle cx="200" cy="180" r="140" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.08" stroke-dasharray="6,6"/>
+  <circle cx="200" cy="180" r="120" fill="none" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3"/>
+  <circle cx="200" cy="180" r="95" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"/>
+
+  <!-- Badge Top -->
+  <g transform="translate(200, 42)">
+    <rect x="-95" y="-14" width="190" height="28" rx="14" fill="#1e1b4b" fill-opacity="0.8" stroke="#818cf8" stroke-width="1.5"/>
+    <text text-anchor="middle" y="5" font-family="'Poppins', sans-serif" font-size="11" font-weight="600" fill="#e0e7ff" letter-spacing="1">2023 – SEKARANG (AKTIF)</text>
+  </g>
+
+  <!-- Male Formal Leader Silhouette with Peci / Songkok -->
+  <g filter="url(#shadow3)">
+    <!-- Body / Formal Suit -->
+    <path d="M 115 400 C 115 325, 145 295, 200 295 C 255 295, 285 325, 285 400 Z" fill="url(#avatarGrad3)"/>
+    <!-- Suit V-Neck Collar & Tie -->
+    <polygon points="182,295 200,345 218,295" fill="#0f172a"/>
+    <polygon points="194,310 206,310 203,380 200,385 197,380" fill="url(#indigoGrad3)"/>
+
+    <!-- Head & Face -->
+    <ellipse cx="200" cy="210" rx="42" ry="50" fill="url(#avatarGrad3)"/>
+    
+    <!-- Peci / Songkok Nasional Formal -->
+    <path d="M 158 178 C 158 140, 162 135, 200 135 C 238 135, 242 140, 242 178 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- Monogram Pill at Bottom Center -->
+  <g transform="translate(200, 435)">
+    <circle cx="0" cy="0" r="26" fill="url(#indigoGrad3)" stroke="#ffffff" stroke-width="2.5" filter="url(#shadow3)"/>
+    <text text-anchor="middle" y="6" font-family="'Poppins', sans-serif" font-size="15" font-weight="700" fill="#ffffff">BM</text>
+  </g>
+
+  <!-- Title Watermark -->
+  <text x="200" y="482" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="500" fill="#c7d2fe" letter-spacing="0.5">Foto • Burhanuddin, S.Ag., M.Fil</text>
+</svg>
