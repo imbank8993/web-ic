@@ -73,7 +73,49 @@ class ICGowa_ACCA_Bridge {
 				'permission_callback' => array( __CLASS__, 'check_permission' ),
 			),
 		) );
+
+		// 5. Kelola Ekstrakurikuler (Ekskul)
+		register_rest_route( self::NAMESPACE, '/ekskul', array(
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( __CLASS__, 'handle_get_ekskul' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( __CLASS__, 'handle_create_ekskul' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+		) );
+
+		register_rest_route( self::NAMESPACE, '/ekskul/(?P<id>\d+)', array(
+			array(
+				'methods'             => array( 'POST', 'PUT', 'PATCH' ),
+				'callback'            => array( __CLASS__, 'handle_update_ekskul' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+			array(
+				'methods'             => 'DELETE',
+				'callback'            => array( __CLASS__, 'handle_delete_ekskul' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+		) );
+
+		// 6. Kelola Data Survey Layanan (Nilai Triwulan & Grafik)
+		register_rest_route( self::NAMESPACE, '/survey', array(
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( __CLASS__, 'handle_get_survey' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( __CLASS__, 'handle_update_survey' ),
+				'permission_callback' => array( __CLASS__, 'check_permission' ),
+			),
+		) );
 	}
+
 
 	/**
 	 * Validasi Secret Key dari Header request
@@ -420,6 +462,192 @@ class ICGowa_ACCA_Bridge {
 	}
 
 	/**
+	 * GET /wp-json/acca/v1/ekskul
+	 */
+	public static function handle_get_ekskul( WP_REST_Request $request ) {
+		$args = array(
+			'post_type'      => 'ekstrakulikuler',
+			'post_status'    => 'publish',
+			'posts_per_page' => -1,
+			'orderby'        => 'title',
+			'order'          => 'ASC',
+		);
+
+		$query = new WP_Query( $args );
+		$list  = array();
+
+		foreach ( $query->posts as $p ) {
+			$thumb_id  = get_post_thumbnail_id( $p->ID );
+			$thumb_url = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'full' ) : null;
+			$desc      = get_post_meta( $p->ID, 'deskripsi', true ) ?: $p->post_content;
+			$galeri    = get_post_meta( $p->ID, 'galeri_foto', true ) ?: '';
+
+			$list[] = array(
+				'id'          => $p->ID,
+				'name'        => html_entity_decode( $p->post_title, ENT_QUOTES, 'UTF-8' ),
+				'slug'        => $p->post_name,
+				'deskripsi'   => $desc,
+				'image_url'   => $thumb_url,
+				'galeri_foto' => ! empty( $galeri ) ? explode( ',', $galeri ) : array(),
+				'permalink'   => get_permalink( $p->ID ),
+			);
+		}
+
+		return rest_ensure_response( array(
+			'success' => true,
+			'total'   => count( $list ),
+			'ekskul'  => $list,
+		) );
+	}
+
+	/**
+	 * POST /wp-json/acca/v1/ekskul
+	 */
+	public static function handle_create_ekskul( WP_REST_Request $request ) {
+		$name      = sanitize_text_field( $request->get_param( 'name' ) ?: $request->get_param( 'title' ) );
+		$deskripsi = $request->get_param( 'deskripsi' ) ?: $request->get_param( 'content' );
+		$image_url = esc_url_raw( $request->get_param( 'image_url' ) ?: $request->get_param( 'featured_image_url' ) ?: '' );
+
+		if ( empty( $name ) ) {
+			return new WP_Error( 'acca_missing_name', 'Nama ekstrakurikuler ("name" atau "title") wajib diisi.', array( 'status' => 400 ) );
+		}
+
+		$post_id = wp_insert_post( array(
+			'post_title'   => strtoupper( $name ),
+			'post_content' => wp_kses_post( $deskripsi ),
+			'post_status'  => 'publish',
+			'post_type'    => 'ekstrakulikuler',
+			'post_author'  => 1,
+		), true );
+
+		if ( is_wp_error( $post_id ) ) {
+			return new WP_Error( 'acca_ekskul_error', $post_id->get_error_message(), array( 'status' => 500 ) );
+		}
+
+		// Simpan meta 'deskripsi' yang dibaca oleh JetEngine listing kartu
+		update_post_meta( $post_id, 'deskripsi', wp_kses_post( $deskripsi ) );
+		update_post_meta( $post_id, '_acca_created', 1 );
+
+		if ( ! empty( $image_url ) ) {
+			self::set_featured_image_from_url( $post_id, $image_url, $name );
+		}
+
+		return rest_ensure_response( array(
+			'success'   => true,
+			'message'   => 'Ekstrakurikuler berhasil ditambahkan.',
+			'id'        => $post_id,
+			'name'      => strtoupper( $name ),
+			'permalink' => get_permalink( $post_id ),
+		) );
+	}
+
+	/**
+	 * PUT/PATCH /wp-json/acca/v1/ekskul/{id}
+	 */
+	public static function handle_update_ekskul( WP_REST_Request $request ) {
+		$post_id = (int) $request->get_param( 'id' );
+		$post    = get_post( $post_id );
+
+		if ( ! $post || $post->post_type !== 'ekstrakulikuler' ) {
+			return new WP_Error( 'acca_not_found', 'Data ekstrakurikuler tidak ditemukan.', array( 'status' => 404 ) );
+		}
+
+		$post_arr = array( 'ID' => $post_id );
+		if ( $request->has_param( 'name' ) || $request->has_param( 'title' ) ) {
+			$name = sanitize_text_field( $request->get_param( 'name' ) ?: $request->get_param( 'title' ) );
+			$post_arr['post_title'] = strtoupper( $name );
+		}
+		if ( $request->has_param( 'deskripsi' ) || $request->has_param( 'content' ) ) {
+			$desc = wp_kses_post( $request->get_param( 'deskripsi' ) ?: $request->get_param( 'content' ) );
+			$post_arr['post_content'] = $desc;
+			update_post_meta( $post_id, 'deskripsi', $desc );
+		}
+
+		wp_update_post( $post_arr );
+
+		if ( $request->has_param( 'image_url' ) || $request->has_param( 'featured_image_url' ) ) {
+			$image_url = esc_url_raw( $request->get_param( 'image_url' ) ?: $request->get_param( 'featured_image_url' ) );
+			if ( ! empty( $image_url ) ) {
+				self::set_featured_image_from_url( $post_id, $image_url, get_the_title( $post_id ) );
+			}
+		}
+
+		return rest_ensure_response( array(
+			'success'   => true,
+			'message'   => 'Data ekstrakurikuler berhasil diperbarui.',
+			'id'        => $post_id,
+			'name'      => get_the_title( $post_id ),
+			'permalink' => get_permalink( $post_id ),
+		) );
+	}
+
+	/**
+	 * DELETE /wp-json/acca/v1/ekskul/{id}
+	 */
+	public static function handle_delete_ekskul( WP_REST_Request $request ) {
+		$post_id = (int) $request->get_param( 'id' );
+		$force   = (bool) $request->get_param( 'force' );
+
+		$post = get_post( $post_id );
+		if ( ! $post || $post->post_type !== 'ekstrakulikuler' ) {
+			return new WP_Error( 'acca_not_found', 'Data ekstrakurikuler tidak ditemukan.', array( 'status' => 404 ) );
+		}
+
+		wp_delete_post( $post_id, $force );
+
+		return rest_ensure_response( array(
+			'success' => true,
+			'message' => 'Ekstrakurikuler berhasil dihapus.',
+			'id'      => $post_id,
+		) );
+	}
+
+	/**
+	 * GET /wp-json/acca/v1/survey
+	 */
+	public static function handle_get_survey() {
+		$json_path = ABSPATH . 'wp-content/uploads/survey/survey_data.json';
+		if ( ! file_exists( $json_path ) ) {
+			return new WP_Error( 'acca_no_survey_file', 'File survey_data.json belum tersedia.', array( 'status' => 404 ) );
+		}
+
+		$data = json_decode( file_get_contents( $json_path ), true );
+		return rest_ensure_response( array(
+			'success' => true,
+			'data'    => $data,
+		) );
+	}
+
+	/**
+	 * POST /wp-json/acca/v1/survey
+	 */
+	public static function handle_update_survey( WP_REST_Request $request ) {
+		$new_data = $request->get_json_params();
+
+		if ( empty( $new_data ) || ! is_array( $new_data ) ) {
+			return new WP_Error( 'acca_invalid_json', 'Payload JSON survey tidak valid atau kosong.', array( 'status' => 400 ) );
+		}
+
+		$dir = ABSPATH . 'wp-content/uploads/survey';
+		if ( ! is_dir( $dir ) ) {
+			wp_mkdir_p( $dir );
+		}
+
+		$json_path = $dir . '/survey_data.json';
+		$saved = file_put_contents( $json_path, json_encode( $new_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE ) );
+
+		if ( $saved === false ) {
+			return new WP_Error( 'acca_save_failed', 'Gagal menulis ke file survey_data.json.', array( 'status' => 500 ) );
+		}
+
+		return rest_ensure_response( array(
+			'success' => true,
+			'message' => 'Data nilai survey berhasil diperbarui dan grafik langsung terupdate di website.',
+			'bytes'   => $saved,
+		) );
+	}
+
+	/**
 	 * Filter nama author di WordPress agar menampilkan nama guru dari ACCA
 	 */
 	public static function filter_the_author( $author_name ) {
@@ -471,3 +699,4 @@ class ICGowa_ACCA_Bridge {
 }
 
 ICGowa_ACCA_Bridge::init();
+
