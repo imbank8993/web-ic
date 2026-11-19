@@ -23,6 +23,9 @@ class ICGowa_ACCA_SSO {
 	public static function init() {
 		add_action( 'rest_api_init', array( __CLASS__, 'register_routes' ) );
 		add_action( 'init', array( __CLASS__, 'handle_sso_auto_login' ) );
+		add_action( 'init', array( __CLASS__, 'handle_single_logout' ), 1 );
+		add_action( 'wp_head', array( __CLASS__, 'render_logout_listener' ) );
+		add_action( 'admin_head', array( __CLASS__, 'render_logout_listener' ) );
 
 		// Header CORS khusus domain resmi ACCA
 		add_action( 'rest_api_init', function () {
@@ -52,6 +55,13 @@ class ICGowa_ACCA_SSO {
 			'methods'             => 'POST',
 			'callback'            => array( __CLASS__, 'handle_generate_sso_link' ),
 			'permission_callback' => array( __CLASS__, 'check_permission' ),
+		) );
+
+		// 3. Single Logout Endpoint (REST API)
+		register_rest_route( self::NAMESPACE, '/logout', array(
+			'methods'             => 'POST',
+			'callback'            => array( __CLASS__, 'handle_rest_logout' ),
+			'permission_callback' => '__return_true',
 		) );
 	}
 
@@ -253,6 +263,145 @@ class ICGowa_ACCA_SSO {
 		$redirect_url = ! empty( $data['redirect_to'] ) ? esc_url_raw( $data['redirect_to'] ) : admin_url();
 		wp_safe_redirect( $redirect_url );
 		exit;
+	}
+
+	/**
+	 * Handler Single Logout: Menerima request dari portal ACCA saat pengguna logout.
+	 * Endpoint: https://icgowa.sch.id/?acca_single_logout=1
+	 */
+	public static function handle_single_logout() {
+		$is_logout_request = false;
+
+		if ( isset( $_GET['acca_single_logout'] ) && '1' === (string) $_GET['acca_single_logout'] ) {
+			$is_logout_request = true;
+		} elseif ( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'acca_single_logout=1' ) !== false ) {
+			$is_logout_request = true;
+		}
+
+		if ( ! $is_logout_request ) {
+			return;
+		}
+
+		// Nonaktifkan segala bentuk cache
+		nocache_headers();
+		header( 'Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0' );
+		header( 'Pragma: no-cache' );
+		header( 'Vary: Origin', false );
+
+		$origin = isset( $_SERVER['HTTP_ORIGIN'] ) ? trim( wp_unslash( $_SERVER['HTTP_ORIGIN'] ) ) : '';
+		$allowed_origins = array(
+			'https://acca.icgowa.sch.id',
+			'http://localhost:3000',
+			'http://localhost:3001',
+		);
+
+		$home_origin = strtolower( wp_parse_url( home_url(), PHP_URL_SCHEME ) . '://' . wp_parse_url( home_url(), PHP_URL_HOST ) );
+		if ( $home_origin ) {
+			$allowed_origins[] = $home_origin;
+		}
+
+		if ( ! empty( $origin ) ) {
+			if ( ! in_array( strtolower( $origin ), $allowed_origins, true ) ) {
+				wp_send_json( array(
+					'ok'    => false,
+					'error' => 'Origin tidak diizinkan: ' . esc_html( $origin ),
+				), 403 );
+			}
+			header( 'Access-Control-Allow-Origin: ' . $origin );
+			header( 'Access-Control-Allow-Credentials: true' );
+		} else {
+			header( 'Access-Control-Allow-Origin: https://acca.icgowa.sch.id' );
+			header( 'Access-Control-Allow-Credentials: true' );
+		}
+
+		header( 'Access-Control-Allow-Methods: POST, OPTIONS' );
+		header( 'Access-Control-Allow-Headers: Authorization, Content-Type, X-Requested-With, X-ACCA-Secret' );
+
+		// Preflight OPTIONS
+		if ( isset( $_SERVER['REQUEST_METHOD'] ) && 'OPTIONS' === $_SERVER['REQUEST_METHOD'] ) {
+			status_header( 204 );
+			exit;
+		}
+
+		// Validasi POST
+		if ( ! isset( $_SERVER['REQUEST_METHOD'] ) || 'POST' !== $_SERVER['REQUEST_METHOD'] ) {
+			header( 'Allow: POST, OPTIONS' );
+			wp_send_json( array(
+				'ok'    => false,
+				'error' => 'Metode HTTP tidak valid. Gunakan POST.',
+			), 405 );
+		}
+
+		// Hapus sesi & otentikasi WordPress
+		wp_logout();
+
+		wp_send_json( array(
+			'ok'      => true,
+			'message' => 'Sesi WordPress berhasil ditutup.',
+		) );
+	}
+
+	/**
+	 * Handler REST API Logout: POST /wp-json/acca/v1/logout
+	 */
+	public static function handle_rest_logout() {
+		wp_logout();
+		return rest_ensure_response( array(
+			'ok'      => true,
+			'message' => 'Sesi WordPress berhasil ditutup.',
+		) );
+	}
+
+	/**
+	 * Render script listener di background tab untuk mendeteksi perubahan cookie acca_logout_at
+	 */
+	public static function render_logout_listener() {
+		if ( ! is_user_logged_in() ) {
+			return;
+		}
+
+		$endpoint  = add_query_arg( 'acca_single_logout', '1', home_url( '/' ) );
+		$login_url = 'https://acca.icgowa.sch.id/login?logged_out=1';
+		?>
+		<script>
+		(function () {
+			if (window.__accaLogoutListener) return;
+			window.__accaLogoutListener = true;
+			var read = function () {
+				return document.cookie.split('; ').find(function (part) {
+					return part.indexOf('acca_logout_at=') === 0;
+				}) || '';
+			};
+			var previous = read(), closing = false;
+			function check() {
+				var current = read();
+				if (!current || current === previous || closing) return;
+				closing = true;
+				var controller = new AbortController();
+				var timer = setTimeout(function () { controller.abort(); }, 10000);
+				fetch(<?php echo wp_json_encode( $endpoint, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ); ?>, {
+					method: 'POST',
+					credentials: 'include',
+					cache: 'no-store',
+					signal: controller.signal
+				})
+				.then(function (res) {
+					if (!res.ok) throw new Error('Logout failed');
+					window.location.replace(<?php echo wp_json_encode( $login_url, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT ); ?>);
+				})
+				.catch(function () {
+					closing = false;
+				})
+				.finally(function () {
+					clearTimeout(timer);
+				});
+			}
+			setInterval(check, 2500);
+			window.addEventListener('focus', check);
+			document.addEventListener('visibilitychange', check);
+		})();
+		</script>
+		<?php
 	}
 }
 

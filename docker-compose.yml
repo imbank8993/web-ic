@@ -22,5 +22,5 @@ services:
           cpus: '1.5'
           memory: 1024M
     volumes:
-      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+      - .:/var/www/html
 
