@@ -161,19 +161,17 @@ define( 'NONCE_SALT',       'h4auqfu41wck22vmr8briuc25imvdwjiaxlpp9xcimtijqokwj4
  */
 $table_prefix = 'wphv_';
 
+/** WordPress Memory Limits for Elementor & JetEngine */
+define( 'WP_MEMORY_LIMIT', '512M' );
+define( 'WP_MAX_MEMORY_LIMIT', '512M' );
+
 /**
  * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the documentation.
- *
- * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+@ini_set( 'display_errors', 1 );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
