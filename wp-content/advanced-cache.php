@@ -23,6 +23,7 @@ if (
 	strpos( $req_uri, 'admin-ajax.php' ) !== false ||
 	strpos( $req_uri, 'preview=true' ) !== false ||
 	strpos( $req_uri, 'acca_sso=' ) !== false ||
+	strpos( $req_uri, 'acca_single_logout' ) !== false ||
 	isset( $_GET['nocache'] )
 ) {
 	return;
