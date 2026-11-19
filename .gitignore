@@ -2,6 +2,9 @@
 error_log
 *.log
 
+# Cache directory
+wp-content/cache/
+
 # Database dumps & archives
 *.sql
 *.tar.gz

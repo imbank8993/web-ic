@@ -12,3 +12,4 @@ error_log
 .claude
 tes.php
 .ftpquota
+wp-content/cache/

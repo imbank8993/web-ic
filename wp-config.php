@@ -161,17 +161,24 @@ define( 'NONCE_SALT',       'h4auqfu41wck22vmr8briuc25imvdwjiaxlpp9xcimtijqokwj4
  */
 $table_prefix = 'wphv_';
 
+/** Caching & VPS Resource Optimization */
+define( 'WP_CACHE', true );
+define( 'DISABLE_WP_CRON', true );
+define( 'WP_POST_REVISIONS', 5 );
+define( 'EMPTY_TRASH_DAYS', 14 );
+
 /** WordPress Memory Limits for Elementor & JetEngine */
 define( 'WP_MEMORY_LIMIT', '512M' );
 define( 'WP_MAX_MEMORY_LIMIT', '512M' );
 
 /**
  * For developers: WordPress debugging mode.
+ * Catat error ke wp-content/debug.log tanpa menampilkan pesan error di layar publik.
  */
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
-define( 'WP_DEBUG_DISPLAY', true );
-@ini_set( 'display_errors', 1 );
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
